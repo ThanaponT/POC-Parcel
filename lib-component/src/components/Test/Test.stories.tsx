@@ -9,6 +9,6 @@ export default {
   },
 } as Meta<typeof Test>;
 
-const Template: Story = () => <Test  />;
+const Template: Story = () => <Test language='en' />;
 
 export const TestTemplate = Template.bind({});

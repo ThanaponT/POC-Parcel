@@ -1,14 +1,14 @@
 import React, {FC, useEffect, useState } from 'react';
 import axios from "axios";
 import { Button, Card, CardBody, CardHeader, CardText } from 'reactstrap';
-
+import { ITest } from '../Interface/ITest';
 const baseURL = `${process.env.API_ENDPOINT}/posts/1`;
 
 interface IPost {
   title: string,
   body: string
 }
-const Test: FC = () => {
+const Test: FC<ITest> = ({language}) => {
 
   const [post, setPost] = useState<IPost>({
     body: '',
@@ -25,6 +25,7 @@ const Test: FC = () => {
     <Card>
           <CardHeader>
           {post.title}
+          Language : {language}
           </CardHeader>
           <CardBody>
               <CardText>
